@@ -1,15 +1,15 @@
-# LeetCode1527.[患某种疾病的患者](https://leetcode.cn/problems/patients-with-a-condition/)
+# [LeetCode1527.患某种疾病的患者](https://leetcode.cn/problems/patients-with-a-condition/)
 
 <details><summary>SQL架构</summary>
 
 ```sql
-Create table If Not Exists Patients (patient_id int, patient_name varchar(30), conditions varchar(100))
-Truncate table Patients
-insert into Patients (patient_id, patient_name, conditions) values ('1', 'Daniel', 'YFEV COUGH')
-insert into Patients (patient_id, patient_name, conditions) values ('2', 'Alice', '')
-insert into Patients (patient_id, patient_name, conditions) values ('3', 'Bob', 'DIAB100 MYOP')
-insert into Patients (patient_id, patient_name, conditions) values ('4', 'George', 'ACNE DIAB100')
-insert into Patients (patient_id, patient_name, conditions) values ('5', 'Alain', 'DIAB201')
+Create table If Not Exists Patients (patient_id int, patient_name varchar(30), conditions varchar(100));
+Truncate table Patients;
+insert into Patients (patient_id, patient_name, conditions) values ('1', 'Daniel', 'YFEV COUGH');
+insert into Patients (patient_id, patient_name, conditions) values ('2', 'Alice', '');
+insert into Patients (patient_id, patient_name, conditions) values ('3', 'Bob', 'DIAB100 MYOP');
+insert into Patients (patient_id, patient_name, conditions) values ('4', 'George', 'ACNE DIAB100');
+insert into Patients (patient_id, patient_name, conditions) values ('5', 'Alain', 'DIAB201');
 ```
 
 </details>
