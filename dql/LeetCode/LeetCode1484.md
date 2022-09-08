@@ -1,17 +1,17 @@
-# LeetCode1484.[按日期分组销售产品](https://leetcode.cn/problems/group-sold-products-by-the-date/)
+# [LeetCode1484.按日期分组销售产品](https://leetcode.cn/problems/group-sold-products-by-the-date/)
 
-<details><summary>SQLL架构</summary>
+<details><summary>SQL架构</summary>
 
 ```sql
-Create table If Not Exists Activities (sell_date date, product varchar(20))
-Truncate table Activities
-insert into Activities (sell_date, product) values ('2020-05-30', 'Headphone')
-insert into Activities (sell_date, product) values ('2020-06-01', 'Pencil')
-insert into Activities (sell_date, product) values ('2020-06-02', 'Mask')
-insert into Activities (sell_date, product) values ('2020-05-30', 'Basketball')
-insert into Activities (sell_date, product) values ('2020-06-01', 'Bible')
-insert into Activities (sell_date, product) values ('2020-06-02', 'Mask')
-insert into Activities (sell_date, product) values ('2020-05-30', 'T-Shirt')
+Create table If Not Exists Activities (sell_date date, product varchar(20));
+Truncate table Activities;
+insert into Activities (sell_date, product) values ('2020-05-30', 'Headphone');
+insert into Activities (sell_date, product) values ('2020-06-01', 'Pencil');
+insert into Activities (sell_date, product) values ('2020-06-02', 'Mask');
+insert into Activities (sell_date, product) values ('2020-05-30', 'Basketball');
+insert into Activities (sell_date, product) values ('2020-06-01', 'Bible');
+insert into Activities (sell_date, product) values ('2020-06-02', 'Mask');
+insert into Activities (sell_date, product) values ('2020-05-30', 'T-Shirt');
 ```
 
 </details>
