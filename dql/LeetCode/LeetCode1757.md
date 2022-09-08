@@ -1,16 +1,19 @@
-# LeetCode 1757.可回收且低脂的产品
-[题目来源](https://leetcode.cn/problems/recyclable-and-low-fat-products/)
+# [LeetCode 1757.可回收且低脂的产品](https://leetcode.cn/problems/recyclable-and-low-fat-products/)
 
-SQL架构：
+<details><summary>SQL架构</summary>
+
 ```sql
-Create table If Not Exists Products (product_id int, low_fats ENUM('Y', 'N'), recyclable ENUM('Y','N'))
-Truncate table Products
-insert into Products (product_id, low_fats, recyclable) values ('0', 'Y', 'N')
-insert into Products (product_id, low_fats, recyclable) values ('1', 'Y', 'Y')
-insert into Products (product_id, low_fats, recyclable) values ('2', 'N', 'Y')
-insert into Products (product_id, low_fats, recyclable) values ('3', 'Y', 'Y')
-insert into Products (product_id, low_fats, recyclable) values ('4', 'N', 'N')
+Create table If Not Exists Products (product_id int, low_fats ENUM('Y', 'N'), recyclable ENUM('Y','N'));
+Truncate table Products;
+insert into Products (product_id, low_fats, recyclable) values ('0', 'Y', 'N');
+insert into Products (product_id, low_fats, recyclable) values ('1', 'Y', 'Y');
+insert into Products (product_id, low_fats, recyclable) values ('2', 'N', 'Y');
+insert into Products (product_id, low_fats, recyclable) values ('3', 'Y', 'Y');
+insert into Products (product_id, low_fats, recyclable) values ('4', 'N', 'N');
 ```
+
+</details>
+
 ```text
 +-------------+---------+
 | Column Name | Type    |
@@ -26,7 +29,8 @@ recyclable 是枚举类型，取值为以下两种 ('Y', 'N')，其中 'Y' 表�
 
 要求：写出 SQL 语句，查找既是低脂又是可回收的产品编号。 返回结果 无顺序要求 。
 
-输入输出示例：
+<details><summary>输入输出示例</summary>
+
 ```text
 Products 表：
 +-------------+----------+------------+
@@ -48,10 +52,11 @@ Result 表：
 只有产品 id 为 1 和 3 的产品，既是低脂又是可回收的产品。
 ```
 
-## AND
+</details>
 
-MySQL：
+## AND
 ```sql
+-- MySQL
 SELECT product_id
 FROM products
 WHERE low_fats = 'Y' AND recyclable = 'Y';
