@@ -1,16 +1,19 @@
-# LeetCode1873 计算特殊奖金
-[题目来源](https://leetcode.cn/problems/calculate-special-bonus/)
+# [LeetCode1873 计算特殊奖金](https://leetcode.cn/problems/calculate-special-bonus/)
 
-SQL架构
+<details><summary>SQL架构</summary>
+
 ```sql
-Create table If Not Exists Employees (employee_id int, name varchar(30), salary int)
-Truncate table Employees
-insert into Employees (employee_id, name, salary) values ('2', 'Meir', '3000')
-insert into Employees (employee_id, name, salary) values ('3', 'Michael', '3800')
-insert into Employees (employee_id, name, salary) values ('7', 'Addilyn', '7400')
-insert into Employees (employee_id, name, salary) values ('8', 'Juan', '6100')
-insert into Employees (employee_id, name, salary) values ('9', 'Kannon', '7700')
+Create table If Not Exists Employees (employee_id int, name varchar(30), salary int);
+Truncate table Employees;
+insert into Employees (employee_id, name, salary) values ('2', 'Meir', '3000');
+insert into Employees (employee_id, name, salary) values ('3', 'Michael', '3800');
+insert into Employees (employee_id, name, salary) values ('7', 'Addilyn', '7400');
+insert into Employees (employee_id, name, salary) values ('8', 'Juan', '6100');
+insert into Employees (employee_id, name, salary) values ('9', 'Kannon', '7700');
 ```
+
+</details>
+
 ```text
 +-------------+---------+
 | 列名        | 类型     |
@@ -27,8 +30,11 @@ employee_id 是这个表的主键。
 - 如果一个雇员的id是奇数并且他的名字不是以'M'开头， 那么他的奖金是他工资的100%，否则奖金为0。
 - 返回的结果集请按照employee_id排序。
 
+
+<details><summary>返回示例</summary>
+
 ```text
-返回示例：
+：
 输入：
 Employees 表:
 +-------------+---------+--------+
@@ -52,9 +58,11 @@ Employees 表:
 +-------------+-------+
 ```
 
+</details>
+
 ## UNION
 ```sql
-# MySQL
+-- MySQL
 SELECT employee_id, salary AS bonus
 FROM Employees
 WHERE employee_id % 2 != 0 AND name NOT LIKE 'M%'
@@ -68,7 +76,7 @@ ORDER BY employee_id ASC
 
 ## CASE WHEN THEN END
 ```sql
-# MySQL
+-- MySQL
 SELECT employee_id,
        (
            CASE
@@ -83,7 +91,7 @@ ORDER BY employee_id ASC
 
 ## IF MOD LEFT (最佳实践)
 ```sql
-# MySQL
+-- MySQL
 SELECT employee_id, 
     IF(
         MOD(employee_id,2) != 0 AND LEFT(name,1) != 'M', salary, 0
