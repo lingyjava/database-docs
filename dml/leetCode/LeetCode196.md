@@ -1,9 +1,8 @@
 # LeetCode196.[删除重复的Email](https://leetcode.cn/problems/delete-duplicate-emails/)
 
-SQL架构：
-<details><summary>SQL</summary>
+<details><summary>SQL架构</summary>
 
-```text
+```sql
 Create~~ table If Not Exists Salary (id int, name varchar(100), sex char(1), salary int)  
 Truncate table Salary  
 insert into Salary (id, name, sex, salary) values ('1', 'A', 'm', '2500')  
