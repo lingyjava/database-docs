@@ -1,13 +1,12 @@
-# LeetCode1667.[修复表中的名字](https://leetcode.cn/problems/fix-names-in-a-table/)
+# [LeetCode1667.修复表中的名字](https://leetcode.cn/problems/fix-names-in-a-table/)
 
-SQL架构：
-<details><summary>SQL</summary>
+<details><summary>SQL架构</summary>
 
-```text
-Create table If Not Exists Users (user_id int, name varchar(40))
-Truncate table Users
-insert into Users (user_id, name) values ('1', 'aLice')
-insert into Users (user_id, name) values ('2', 'bOB')
+```sql
+Create table If Not Exists Users (user_id int, name varchar(40));
+Truncate table Users;
+insert into Users (user_id, name) values ('1', 'aLice');
+insert into Users (user_id, name) values ('2', 'bOB');
 ```
 
 </details>
@@ -25,7 +24,7 @@ user_id 是该表的主键。
 
 要求：编写一个 SQL 查询来修复名字，使得只有第一个字符是大写的，其余都是小写的。 返回按 user_id 排序的结果表。
 
-<details><summary>返回示例：</summary>
+<details><summary>返回示例</summary>
 
 ```text
 输入：
