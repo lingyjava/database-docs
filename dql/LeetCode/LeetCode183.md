@@ -1,19 +1,23 @@
 # LeetCode183. 从不订购的客户
 [题目来源](https://leetcode.cn/problems/customers-who-never-order/)
 
-SQL架构：
+<details><summary>SQL架构</summary>
+
 ```sql
-Create table If Not Exists Customers (id int, name varchar(255))
-Create table If Not Exists Orders (id int, customerId int)
-Truncate table Customers
-insert into Customers (id, name) values ('1', 'Joe')
-insert into Customers (id, name) values ('2', 'Henry')
-insert into Customers (id, name) values ('3', 'Sam')
-insert into Customers (id, name) values ('4', 'Max')
-Truncate table Orders
-insert into Orders (id, customerId) values ('1', '3')
-insert into Orders (id, customerId) values ('2', '1')
+Create table If Not Exists Customers (id int, name varchar(255));
+Create table If Not Exists Orders (id int, customerId int);
+Truncate table Customers;
+insert into Customers (id, name) values ('1', 'Joe');
+insert into Customers (id, name) values ('2', 'Henry');
+insert into Customers (id, name) values ('3', 'Sam');
+insert into Customers (id, name) values ('4', 'Max');
+Truncate table Orders;
+insert into Orders (id, customerId) values ('1', '3');
+insert into Orders (id, customerId) values ('2', '1');
 ```
+
+</details>
+
 ```text
 Customers 表：
 +----+-------+
@@ -33,7 +37,8 @@ Orders 表：
 +----+------------+
 ```
 
-返回示例：
+<details><summary>返回示例</summary>
+
 ```text
 +-----------+
 | Customers |
@@ -42,6 +47,8 @@ Orders 表：
 | Max       |
 +-----------+
 ```
+
+</details>
 
 要求：编写一个 SQL 查询，找出所有从不订购任何东西的客户。
 
