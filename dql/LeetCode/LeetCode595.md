@@ -1,16 +1,19 @@
-# LeetCode 595.大的国家  
-[题目来源](https://leetcode.cn/problems/big-countries/)
+# [LeetCode 595.大的国家]  (https://leetcode.cn/problems/big-countries/)
 
-SQL架构：  
+<details><summary>SQL架构</summary>
+
 ```sql
-Create table If Not Exists World (name varchar(255), continent varchar(255), area int, population int, gdp int)
-Truncate table World
-insert into World (name, continent, area, population, gdp) values ('Afghanistan', 'Asia', '652230', '25500100', '20343000000')
-insert into World (name, continent, area, population, gdp) values ('Albania25000000', 'Europe', '28748', '2831741', '12960000000')
-insert into World (name, continent, area, population, gdp) values ('Algeria', 'Africa', '2381741', '37100000', '188681000000')
-insert into World (name, continent, area, population, gdp) values ('Andorra', 'Europe', '468', '78115', '3712000000')
-insert into World (name, continent, area, population, gdp) values ('Angola', 'Africa', '1246700', '20609294', '100990000000')
+Create table If Not Exists World (name varchar(255), continent varchar(255), area int, population int, gdp int);
+Truncate table World;
+insert into World (name, continent, area, population, gdp) values ('Afghanistan', 'Asia', '652230', '25500100', '20343000000');
+insert into World (name, continent, area, population, gdp) values ('Albania25000000', 'Europe', '28748', '2831741', '12960000000');
+insert into World (name, continent, area, population, gdp) values ('Algeria', 'Africa', '2381741', '37100000', '188681000000');
+insert into World (name, continent, area, population, gdp) values ('Andorra', 'Europe', '468', '78115', '3712000000');
+insert into World (name, continent, area, population, gdp) values ('Angola', 'Africa', '1246700', '20609294', '100990000000');
 ```
+
+</details>
+
 ```text
 +-------------+---------+
 | Column Name | Type    |
@@ -31,7 +34,8 @@ name 是这张表的主键。
 
 要求：编写一个SQL查询以报告 大国 的国家名称、人口和面积。 按任意顺序返回结果表。
 
-输入输出示例：
+<details><summary>输入输出示例</summary>
+
 ```text
 输入：
 World 表：
@@ -52,6 +56,8 @@ World 表：
 | Algeria     | 37100000   | 2381741 |
 +-------------+------------+---------+
 ```
+
+</details>
 
 ## OR
 
