@@ -1,19 +1,5 @@
 # [LeetCode1873 计算特殊奖金](https://leetcode.cn/problems/calculate-special-bonus/)
 
-<details><summary>SQL架构</summary>
-
-```sql
-Create table If Not Exists Employees (employee_id int, name varchar(30), salary int);
-Truncate table Employees;
-insert into Employees (employee_id, name, salary) values ('2', 'Meir', '3000');
-insert into Employees (employee_id, name, salary) values ('3', 'Michael', '3800');
-insert into Employees (employee_id, name, salary) values ('7', 'Addilyn', '7400');
-insert into Employees (employee_id, name, salary) values ('8', 'Juan', '6100');
-insert into Employees (employee_id, name, salary) values ('9', 'Kannon', '7700');
-```
-
-</details>
-
 ```text
 +-------------+---------+
 | 列名        | 类型     |
@@ -30,11 +16,7 @@ employee_id 是这个表的主键。
 - 如果一个雇员的id是奇数并且他的名字不是以'M'开头， 那么他的奖金是他工资的100%，否则奖金为0。
 - 返回的结果集请按照employee_id排序。
 
-
-<details><summary>返回示例</summary>
-
 ```text
-：
 输入：
 Employees 表:
 +-------------+---------+--------+
@@ -58,9 +40,10 @@ Employees 表:
 +-------------+-------+
 ```
 
-</details>
+## MySQL
 
-## UNION
+### UNION
+
 ```sql
 -- MySQL
 SELECT employee_id, salary AS bonus
@@ -74,7 +57,7 @@ ORDER BY employee_id ASC
 ;
 ```
 
-## CASE WHEN THEN END
+### CASE
 ```sql
 -- MySQL
 SELECT employee_id,
@@ -89,7 +72,7 @@ ORDER BY employee_id ASC
 ;
 ```
 
-## IF MOD LEFT (最佳实践)
+## IF
 ```sql
 -- MySQL
 SELECT employee_id, 
@@ -101,7 +84,7 @@ ORDER BY employee_id ASC
 ;
 ```
 
-## MySQL函数文档
+### MySQL函数文档
 
 - MOD(N,M)：该函数返回N除以M后的余数.
 - LEFT(str,len)：返回最左边的n个字符的字符串str，或NULL如果任何参数是NULL。
