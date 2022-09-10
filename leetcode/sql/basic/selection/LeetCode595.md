@@ -1,4 +1,4 @@
-# [LeetCode 595.大的国家]  (https://leetcode.cn/problems/big-countries/)
+# [LeetCode595.大的国家](https://leetcode.cn/problems/big-countries/)
 
 ```text
 +-------------+---------+
