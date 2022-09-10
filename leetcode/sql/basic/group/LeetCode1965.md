@@ -1,22 +1,5 @@
 # [LeetCode1965.丢失信息的雇员](https://leetcode.cn/problems/employees-with-missing-information/)
 
-<details><summary>SQL架构</summary>
-
-```sql
-Create table If Not Exists Employees (employee_id int, name varchar(30));
-Create table If Not Exists Salaries (employee_id int, salary int);
-Truncate table Employees;
-insert into Employees (employee_id, name) values ('2', 'Crew');
-insert into Employees (employee_id, name) values ('4', 'Haven');
-insert into Employees (employee_id, name) values ('5', 'Kristian');
-Truncate table Salaries;
-insert into Salaries (employee_id, salary) values ('5', '76071');
-insert into Salaries (employee_id, salary) values ('1', '22517');
-insert into Salaries (employee_id, salary) values ('4', '63539');
-```
-
-</details>
-
 ```text
 表: Employees
 +-------------+---------+
@@ -44,9 +27,11 @@ employee_id is 这个表的主键。
 - 雇员的 姓名 丢失了，
 - 雇员的 薪水信息 丢失了，
 
-## UNION ALL
+## MySQL
+
+### UNION ALL
+
 ```sql
--- MySQL
 SELECT employee_id
 FROM
     (
@@ -66,9 +51,8 @@ ORDER BY employee_id ASC
 -- 2、将雇员ID分组计算,若数量不为1则说明有表中确实了该雇员ID
 ```
 
-## subQuery + UNION
+### subQuery + UNION
 ```sql
--- MySQL
 SELECT employee_id
 FROM salaries
 WHERE employee_id NOT IN (SELECT employee_id FROM employees WHERE name IS NOT NULL)
@@ -84,7 +68,7 @@ ORDER BY employee_id ASC
 -- 可扩展性低
 ```
 
-## WITH + UNION ALL
+### WITH + UNION ALL
 
 ```sql
 -- MySQL
@@ -105,7 +89,7 @@ ORDER BY employee_id
 ;
 ```
 
-## LEFT JOIN + RIGHT JOIN
+### LEFT JOIN + RIGHT JOIN
 
 ```sql
 SELECT employee_id
@@ -118,7 +102,7 @@ ORDER BY employee_id
 ;
 ```
 
-## NOT EXISTS + subQuery + UNION ALL
+### NOT EXISTS + subQuery + UNION ALL
 
 ```sql
 -- MySQL
