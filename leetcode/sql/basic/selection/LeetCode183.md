@@ -1,22 +1,4 @@
-# LeetCode183. 从不订购的客户
-[题目来源](https://leetcode.cn/problems/customers-who-never-order/)
-
-<details><summary>SQL架构</summary>
-
-```sql
-Create table If Not Exists Customers (id int, name varchar(255));
-Create table If Not Exists Orders (id int, customerId int);
-Truncate table Customers;
-insert into Customers (id, name) values ('1', 'Joe');
-insert into Customers (id, name) values ('2', 'Henry');
-insert into Customers (id, name) values ('3', 'Sam');
-insert into Customers (id, name) values ('4', 'Max');
-Truncate table Orders;
-insert into Orders (id, customerId) values ('1', '3');
-insert into Orders (id, customerId) values ('2', '1');
-```
-
-</details>
+# [LeetCode183. 从不订购的客户](https://leetcode.cn/problems/customers-who-never-order/)
 
 ```text
 Customers 表：
@@ -37,7 +19,7 @@ Orders 表：
 +----+------------+
 ```
 
-<details><summary>返回示例</summary>
+要求：编写一个 SQL 查询，找出所有从不订购任何东西的客户。
 
 ```text
 +-----------+
@@ -48,23 +30,21 @@ Orders 表：
 +-----------+
 ```
 
-</details>
-
-要求：编写一个 SQL 查询，找出所有从不订购任何东西的客户。
+## MySQL
 
 ## AS + NOT IN + subQuery
+
 ```sql
-# MySQL
 SELECT customers.name AS Customers
 FROM customers
 WHERE id NOT IN (
     SELECT orders.customerId FROM orders
-);
+)
+;
 ```
 
 ## LEFT JOIN
 ```sql
-# MySQL
 SELECT customers.name AS Customers
 FROM customers LEFT JOIN orders ON customers.id = orders.CustomerId
 WHERE orders.customerId IS NULL
