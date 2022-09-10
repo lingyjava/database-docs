@@ -1,18 +1,5 @@
 # [LeetCode176.第二高的薪水](https://leetcode.cn/problems/second-highest-salary/)
 
-<details><summary>SQL架构</summary>
-
-```sql
-Create table If Not Exists Employee (id int, salary int);
-Truncate table Employee;
-insert into Employee (id, salary) values ('1', '100');
-insert into Employee (id, salary) values ('2', '200');
-insert into Employee (id, salary) values ('3', '300');
-```
-
-</details>
-
-## 要求
 ```text
 Employee 表：
 +-------------+------+
@@ -45,9 +32,10 @@ Employee 表：
 +---------------------+
 ```
 
-## IFNULL + LIMIT
+## MySQL
+
+### IFNULL + LIMIT
 ```sql
--- MySQL
 -- IFNULL 不必须
 SELECT IFNULL(
                (
@@ -56,6 +44,6 @@ SELECT IFNULL(
                    ORDER BY salary DESC
                    LIMIT 1 OFFSET 1
                ), NULL) AS SecondHighestSalary
-FROM DUAL -- MySQL可不需要
+FROM DUAL -- MySQL可不必须
 ;
 ```
