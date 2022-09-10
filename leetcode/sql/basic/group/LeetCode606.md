@@ -1,21 +1,5 @@
 # [LeetCode608.树节点](https://leetcode.cn/problems/tree-node/)
 
-<details><summary>SQL架构</summary>
-
-```sql
-Create table If Not Exists Tree (id int, p_id int);
-Truncate table Tree;
-insert into Tree (id, p_id) values ('1', 'None');
-insert into Tree (id, p_id) values ('2', '1');
-insert into Tree (id, p_id) values ('3', '1');
-insert into Tree (id, p_id) values ('4', '2');
-insert into Tree (id, p_id) values ('5', '2');
-```
-
-</details>
-
-## 要求
-
 ```text
 给定一个表tree，id 是树节点的编号，p_id是它父节点的id 。
 
@@ -48,9 +32,11 @@ insert into Tree (id, p_id) values ('5', '2');
 +----+------+
 ```
 
-## UNION
+## MySQL
+
+### UNION
+
 ```sql
--- MySQL
 -- 1、Root: 没有父节点
 -- 2、叶子节点是没有孩子节点的节点，且它有父亲节点。
 -- 3、内部节点是有孩子节点和父节点的节点。
@@ -76,7 +62,7 @@ ORDER BY id ASC
 ;
 ```
 
-## CASE WHEN
+### CASE
 ```sql
 SELECT id , (
     CASE
@@ -89,7 +75,7 @@ FROM tree
 ;
 ```
 
-## IF
+### IF
 ```sql
 SELECT id , 
 (
