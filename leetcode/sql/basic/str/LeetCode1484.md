@@ -1,21 +1,5 @@
 # [LeetCode1484.按日期分组销售产品](https://leetcode.cn/problems/group-sold-products-by-the-date/)
 
-<details><summary>SQL架构</summary>
-
-```sql
-Create table If Not Exists Activities (sell_date date, product varchar(20));
-Truncate table Activities;
-insert into Activities (sell_date, product) values ('2020-05-30', 'Headphone');
-insert into Activities (sell_date, product) values ('2020-06-01', 'Pencil');
-insert into Activities (sell_date, product) values ('2020-06-02', 'Mask');
-insert into Activities (sell_date, product) values ('2020-05-30', 'Basketball');
-insert into Activities (sell_date, product) values ('2020-06-01', 'Bible');
-insert into Activities (sell_date, product) values ('2020-06-02', 'Mask');
-insert into Activities (sell_date, product) values ('2020-05-30', 'T-Shirt');
-```
-
-</details>
-
 ```text
 表Activities：
 +-------------+---------+
@@ -31,8 +15,6 @@ insert into Activities (sell_date, product) values ('2020-05-30', 'T-Shirt');
 要求： 编写一个 SQL 查询来查找每个日期、销售的不同产品的数量及其名称。 
 - 每个日期的销售产品名称应按词典序排列。
 - 返回按sell_date 排序的结果表。
-
-<details><summary>输入输出示例</summary>
 
 ```text
 输入：
@@ -58,9 +40,10 @@ Activities 表：
 +------------+----------+------------------------------+
 ```
 
-</details>
+## MySQL
 
-## GROUP_CONCAT + DISTINCT 
+### GROUP_CONCAT + DISTINCT 
+
 ```sql
 SELECT 
     sell_date, 
