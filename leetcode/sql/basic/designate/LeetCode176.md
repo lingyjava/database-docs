@@ -47,3 +47,34 @@ SELECT IFNULL(
 FROM DUAL -- MySQL可不必须
 ;
 ```
+
+### DENSE_RANK
+```sql
+SELECT IFNULL(
+    (
+        SELECT t.salary 
+        FROM (
+            SELECT id , salary , DENSE_RANK() OVER(ORDER BY salary DESC) AS r
+            FROM Employee
+        ) AS t
+        WHERE r = 2
+        LIMIT 1
+    ), NULL
+) AS SecondHighestSalary
+;
+```
+
+### 窗口函数
+函数返回当前行所在的分区内的排名，从 1 开始.
+- DENSE_RANK() 相同的值具有相同的排名，排名不跳跃.
+- RANK() 相同的值具有相同的排名，排名跳跃.
+- ROW_NUMBER() 即使相同的值，依旧按照连续数字进行排名。
+
+语法：
+```text
+DENSE_RANK()
+OVER (
+  [PARTITION BY partition_column_list] -- 类似group by
+  [ORDER BY order_column_list]
+)
+```
