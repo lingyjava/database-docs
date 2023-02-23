@@ -1,5 +1,4 @@
 # 数据库文档
 
 ## SQL
-
-### leetCode案例
+- [1·LeetCode案例](docs/sql/1·LeetCode案例.md)
