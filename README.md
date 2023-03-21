@@ -11,6 +11,7 @@
 - [6·DCL语法结构](/docs/sql/6·DCL语法结构.md)
 - [7·SQL函数](/docs/sql/7·SQL函数.md)
 - [8·SQL优化](/docs/sql/8·SQL优化.md)
+- [9·PLSQL](/docs/sql/9·PLSQL.md)
 
 ## MySQL
 
@@ -20,4 +21,8 @@
 ## PostgreSQL
 
 ## Redis
-
+- [1·Redis简介](/docs/redis/1·Redis简介.md)
+- [2·Redis数据类型](/docs/redis/2·Redis数据类型.md)
+- [3·Redis持久化](/docs/redis/3·Redis持久化.md)
+- [4·Redis主从复制](/docs/redis/4·Redis主从复制.md)
+- [5·Redis配置](/docs/redis/5·Redis配置.md)
