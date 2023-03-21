@@ -19,6 +19,7 @@
 - [1·Oracle数据库原理及应用](/docs/oracle/1·Oracle数据库原理及应用.md)
 
 ## PostgreSQL
+- [1·PostgreSQL调研过程](/docs/postgresql/1·PostgreSQL调研过程.md)
 
 ## Redis
 - [1·Redis简介](/docs/redis/1·Redis简介.md)
