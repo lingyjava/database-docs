@@ -30,6 +30,8 @@ SELECT * FROM mytable;
 ```
 
 ## 更新
+-[[Mysql语法]--update inner join使用（批量更新）](https://blog.csdn.net/high2011/article/details/83006786)
+
 ```sql
 UPDATE mytable
 SET col = val

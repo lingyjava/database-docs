@@ -1,6 +1,7 @@
 # 数据库文档
 
 ## 基础
+- [1·数据库核心知识](/docs/base/1·数据库核心知识.md)
 
 ## SQL
 - [1·SQL简介](/docs/sql/1·SQL简介.md)
@@ -14,6 +15,8 @@
 - [9·PLSQL](/docs/sql/9·PLSQL.md)
 
 ## MySQL
+- [1·MySQL架构](/docs/mysql/1·MySQL架构.md)
+- [2·MySQL数据类型](/docs/mysql/2·MySQL数据类型.md)
 
 ## Oracle
 - [1·Oracle数据库原理及应用](/docs/oracle/1·Oracle数据库原理及应用.md)
