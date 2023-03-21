@@ -10,6 +10,7 @@
 - [5·DQL语法结构](/docs/sql/5·DQL语法结构.md)
 - [6·DCL语法结构](/docs/sql/6·DCL语法结构.md)
 - [7·SQL函数](/docs/sql/7·SQL函数.md)
+- [8·SQL优化](/docs/sql/8·SQL优化.md)
 
 ## MySQL
 
