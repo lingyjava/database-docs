@@ -17,6 +17,8 @@
 ## MySQL
 - [1·MySQL架构](/docs/mysql/1·MySQL架构.md)
 - [2·MySQL数据类型](/docs/mysql/2·MySQL数据类型.md)
+- [3·MySQL常用功能](/docs/mysql/3·MySQL常用功能.md)
+- [4·MySQL常见问题](/docs/mysql/4·MySQL常见问题.md)
 
 ## Oracle
 - [1·Oracle数据库原理及应用](/docs/oracle/1·Oracle数据库原理及应用.md)
