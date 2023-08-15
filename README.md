@@ -1,34 +1,17 @@
-# 数据库文档
+# database-docs
 
-## 基础
-- [1·数据库核心知识](/docs/base/1·数据库核心知识.md)
+数据库相关文档记录。
 
-## SQL
-- [1·SQL简介](/docs/sql/1·SQL简介.md)
-- [2·LeetCode](docs/sql/2·LeetCode.md)
-- [3·DDL语法结构](/docs/sql/3·DDL语法结构.md)
-- [4·DML语法结构](/docs/sql/4·DML语法结构.md)
-- [5·DQL语法结构](/docs/sql/5·DQL语法结构.md)
-- [6·DCL语法结构](/docs/sql/6·DCL语法结构.md)
-- [7·SQL函数](/docs/sql/7·SQL函数.md)
-- [8·SQL优化](/docs/sql/8·SQL优化.md)
-- [9·PLSQL](/docs/sql/9·PLSQL.md)
 
-## MySQL
-- [1·MySQL架构](/docs/mysql/1·MySQL架构.md)
-- [2·MySQL数据类型](/docs/mysql/2·MySQL数据类型.md)
-- [3·MySQL常用功能](/docs/mysql/3·MySQL常用功能.md)
-- [4·MySQL常见问题](/docs/mysql/4·MySQL常见问题.md)
 
-## Oracle
-- [1·Oracle数据库原理及应用](/docs/oracle/1·Oracle数据库原理及应用.md)
-
-## PostgreSQL
-- [1·PostgreSQL调研过程](/docs/postgresql/1·PostgreSQL调研过程.md)
-
-## Redis
-- [1·Redis简介](/docs/redis/1·Redis简介.md)
-- [2·Redis数据类型](/docs/redis/2·Redis数据类型.md)
-- [3·Redis持久化](/docs/redis/3·Redis持久化.md)
-- [4·Redis主从复制](/docs/redis/4·Redis主从复制.md)
-- [5·Redis配置](/docs/redis/5·Redis配置.md)
+| base                                               | SQL                                         | MySQL                                             | Oracle                                                       | PostgreSQL                                                   | Redis                                             |
+| -------------------------------------------------- | ------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------- |
+| [1·数据库核心知识](/docs/base/1·数据库核心知识.md) | [1·SQL简介](/docs/sql/1·SQL简介.md)         | [1·MySQL架构](/docs/mysql/1·MySQL架构.md)         | [1·Oracle数据库原理及应用](/docs/oracle/1·Oracle数据库原理及应用.md) | [1·PostgreSQL调研过程](/docs/postgresql/1·PostgreSQL调研过程.md) | [1·Redis简介](/docs/redis/1·Redis简介.md)         |
+|                                                    | [2·LeetCode](docs/sql/2·LeetCode.md)        | [2·MySQL数据类型](/docs/mysql/2·MySQL数据类型.md) |                                                              |                                                              | [2·Redis数据类型](/docs/redis/2·Redis数据类型.md) |
+|                                                    | [3·DDL语法结构](/docs/sql/3·DDL语法结构.md) | [3·MySQL事件](/docs/mysql/3·MySQL事件.md)         |                                                              |                                                              | [3·Redis持久化](/docs/redis/3·Redis持久化.md)     |
+|                                                    | [4·DML语法结构](/docs/sql/4·DML语法结构.md) | [4·MySQL死锁](/docs/mysql/4·MySQL死锁.md)         |                                                              |                                                              | [4·Redis主从复制](/docs/redis/4·Redis主从复制.md) |
+|                                                    | [5·DQL语法结构](/docs/sql/5·DQL语法结构.md) |                                                   |                                                              |                                                              | [5·Redis配置](/docs/redis/5·Redis配置.md)         |
+|                                                    | [6·DCL语法结构](/docs/sql/6·DCL语法结构.md) |                                                   |                                                              |                                                              |                                                   |
+|                                                    | [7·SQL函数](/docs/sql/7·SQL函数.md)         |                                                   |                                                              |                                                              |                                                   |
+|                                                    | [8·SQL优化](/docs/sql/8·SQL优化.md)         |                                                   |                                                              |                                                              |                                                   |
+|                                                    | [9·PLSQL](/docs/sql/9·PLSQL.md)             |                                                   |                                                              |                                                              |                                                   |
